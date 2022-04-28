@@ -22,3 +22,8 @@ http://localhost:5601/
 ## Vérifier que l'index est alimenté
 - Menu -> Discover 
 - Vérifier qu'il y a des données
+
+## Pour récupérer le board que j'ai testé
+- menu -> Saved Object -> Import 
+- importer le fichier dashboard.ndjson
+- menu -> Dashboard -> Martinique
