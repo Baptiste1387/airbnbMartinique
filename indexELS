@@ -1,0 +1,108 @@
+PUT airbnbmartinique2
+{
+  "mappings": {
+      "properties": {
+        "address": {
+          "type": "keyword"
+        },
+        "calendar": {
+          "properties": {
+            "available": {
+              "type": "boolean"
+            },
+            "date": {
+              "type": "date"
+            }
+          }
+        },
+        "location": {
+          "type":"geo_point"
+        },
+        "name": {
+          "type": "text"
+        },
+        "numberOfGuests": {
+          "type": "long"
+        },
+        "pricing": {
+          "properties": {
+            "rate": {
+              "properties": {
+                "amount": {
+                  "type": "long"
+                },
+                "amount_formatted": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "currency": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "is_micros_accuracy": {
+                  "type": "boolean"
+                }
+              }
+            },
+            "rate_type": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "rate_with_service_fee": {
+              "properties": {
+                "amount": {
+                  "type": "long"
+                },
+                "amount_formatted": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "currency": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "is_micros_accuracy": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        },
+        "roomType": {
+          "type": "keyword"
+        },
+        "stars": {
+          "type": "float"
+        },
+        "url": {
+          "type": "keyword"
+        }
+      }
+    }
+  
+}
