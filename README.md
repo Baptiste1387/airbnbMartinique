@@ -19,6 +19,8 @@ http://localhost:5601/
 
 ## Alimenter l'index via le script nodejs
 - Se mettre sur le répertoire 
+- installer le module elastic 
+  - npm install elasticsearch
 - lancer "nodejs martinique.js"
 
 ## Vérifier que l'index est alimenté
