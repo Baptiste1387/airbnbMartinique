@@ -24,7 +24,6 @@ async function bulk (dataset){
       node: 'http://localhost:9200'
   })
   const operations = dataset.flatMap(doc => [{ index: { _index: 'airbnbmartinique2' } }, doc])
-  console.log(operations)
   const bulkResponse = await client.bulk({ refresh: true, operations })
 }
 
